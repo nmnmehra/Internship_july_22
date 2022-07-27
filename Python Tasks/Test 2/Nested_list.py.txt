@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    dict={}
+    n=[]
+    s=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        dict[name]=score
+        n.append(name)
+        s.append(score)
+    x=min([x for x in s if x!=min(s)])
+    ans=[]
+    for nm in n:
+        scr=dict[nm]
+        if x==scr:
+            ans.append(nm)
+    ans.sort()
+    for i in ans:
+        print(i)

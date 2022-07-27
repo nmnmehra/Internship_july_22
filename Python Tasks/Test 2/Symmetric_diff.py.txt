@@ -1,0 +1,14 @@
+m=int(input())
+a=set(input().split())
+n=int(input())
+b=set(input().split())
+x1=a.difference(b)
+x2=b.difference(a)
+ar=[]
+for i in x1:
+    ar.append(int(i))
+for i in x2:
+    ar.append(int(i))
+ar.sort()
+for i in ar:
+    print(i)

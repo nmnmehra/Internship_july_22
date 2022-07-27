@@ -1,0 +1,10 @@
+a=[int(x) for x in input().split()]
+n,m=a[0],a[1]
+arr=[int(x)for x in input().split()]
+a1=[int(x)for x in input().split()]
+a2=[int(x)for x in input().split()]
+
+A=set(a1)
+B=set(a2)
+ar=set(arr)
+print(sum((i in A) - (i in B) for i in ar))
