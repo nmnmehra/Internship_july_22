@@ -1,0 +1,13 @@
+def merge_the_tools(string, k):
+    s=len(string)//k
+    for i in range(0,len(string),k):
+        x=(string[i:i+k])
+        uni =[]
+        for j in x:
+            if j not in uni:
+                uni.append(j)
+        print (''.join(uni))
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
