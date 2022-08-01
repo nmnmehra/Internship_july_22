@@ -1,0 +1,10 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> List[int]:
+        ans={}
+        Ans=[]
+        for i in nums:
+            ans[i]=ans.get(i,0)+1
+        for i in ans:
+            if ans[i]==1:
+                Ans.append(i)
+        return Ans
