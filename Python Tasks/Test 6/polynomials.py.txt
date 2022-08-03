@@ -1,0 +1,4 @@
+import numpy as np
+arr=np.array(input().split(),float)
+a=int(input())
+print(np.polyval(arr,a))

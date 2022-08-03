@@ -1,0 +1,5 @@
+import numpy as np
+a, b = map(int,input().split())
+arr = np.array([input().split() for _ in range(a)],int)
+sum=np.sum(arr,axis=0)
+print(np.prod(sum,axis=0))

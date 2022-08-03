@@ -1,0 +1,6 @@
+import numpy as np
+a, b = map(int,input().split())
+arr = np.array([input().split() for _ in range(a)],int)
+print(np.mean(arr,axis=1))
+print(np.var(arr,axis=0))
+print(np.around(np.std(arr),11))

@@ -1,0 +1,4 @@
+import numpy as np
+a=int(input())
+arr=np.array([input().split() for _ in range(a)],float)
+print(np.around(np.linalg.det(arr),2))

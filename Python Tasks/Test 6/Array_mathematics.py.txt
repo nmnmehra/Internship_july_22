@@ -1,0 +1,10 @@
+import numpy as np
+a, b = map(int,input().split())
+arrA = np.array([input().split() for _ in range(a)],int)
+arrB = np.array([input().split() for _ in range(a)],int)
+print(np.add(arrA,arrB))
+print(np.subtract(arrA,arrB))
+print(np.multiply(arrA,arrB))
+print(np.floor_divide(arrA,arrB))
+print(np.mod(arrA,arrB))
+print(np.power(arrA,arrB))

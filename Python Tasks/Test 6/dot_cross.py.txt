@@ -1,0 +1,5 @@
+import numpy as np
+a = int(input())
+arr1 = np.array([input().split() for _ in range(a)],int)
+arr2 = np.array([input().split() for _ in range(a)],int)
+print(np.dot(arr1,arr2))
