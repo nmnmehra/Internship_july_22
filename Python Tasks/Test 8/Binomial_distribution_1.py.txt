@@ -1,0 +1,14 @@
+def fact(n):
+    if n<=1:
+        return 1
+    return n*fact(n-1)
+
+def combination(n, x):
+    return fact(n) / (fact(x) * fact(n-x))
+
+def b(x, n, p):
+    return combination(n, x) * p**x * (1-p)**(n-x)
+
+l, r = list(map(float, input().split(" ")))
+ratio = l / r
+print(round(sum([b(i, 6, ratio / (1 + ratio)) for i in range(3, 7)]), 3))

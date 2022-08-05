@@ -1,0 +1,9 @@
+import math
+tickets=float(input())
+stu=float(input())
+m=float(input())
+std=float(input())
+mean=stu*m
+stddev=math.sqrt(stu)*std
+cdf = lambda x: 0.5 * (1 + math.erf((x - mean) / (stddev * (2 ** 0.5))))
+print(round(cdf(tickets),4))

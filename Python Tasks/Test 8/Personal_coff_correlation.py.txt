@@ -1,0 +1,10 @@
+N = int(input())
+X = list(map(float,input().strip().split()))
+Y = list(map(float,input().strip().split()))
+mx = sum(X) / N
+my = sum(Y) / N
+stdx = (sum([(i - mx)**2 for i in X]) / N)**0.5
+stdy = (sum([(i - my)**2 for i in Y]) / N)**0.5
+cov = sum([(X[i] - mx) * (Y[i] -my) for i in range(N)])
+correlationcoff = cov / (N * stdx * stdy)
+print(round(correlationcoff,3))

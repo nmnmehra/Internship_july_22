@@ -1,0 +1,11 @@
+import math
+mean,stddev=list(map(int, input().split(" ")))
+h1=float(input())
+h2=float(input())
+
+cdf = lambda x: 0.5 * (1 + math.erf((x - mean) / (stddev * (2 ** 0.5))))
+
+
+print(round((1-cdf(h1))*100,2))
+print(round((1-cdf(h2))*100,2))
+print(round((cdf(h2))*100,2))

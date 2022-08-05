@@ -1,0 +1,11 @@
+import math
+stu=float(input())
+m=float(input())
+std=float(input())
+prob=float(input())
+z=float(input())
+stddev=std/math.sqrt(stu)
+A = m - (z*stddev)
+B = m + (z*stddev)
+print(round(A,2))
+print(round(B,2))

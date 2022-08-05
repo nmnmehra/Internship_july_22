@@ -1,0 +1,14 @@
+def fact(n):
+    if n<=1:
+        return 1
+    return n*fact(n-1)
+
+def combination(n, x):
+    return fact(n) / (fact(x) * fact(n-x))
+
+def b(x, n, p):
+    return combination(n, x) * p**x * (1-p)**(n-x)
+
+l, r = list(map(int, input().split(" ")))
+print(round(sum([b(i, r, l/100) for i in range (3)]), 3))
+print(round(sum([b(i, r, l/100) for i in range(2,r+1)]), 3))

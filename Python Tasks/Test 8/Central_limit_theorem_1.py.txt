@@ -1,0 +1,9 @@
+import math
+trans=float(input())
+boxes=float(input())
+m=float(input())
+std=float(input())
+mean=boxes*m
+stddev=math.sqrt(boxes)*std
+cdf = lambda x: 0.5 * (1 + math.erf((x - mean) / (stddev * (2 ** 0.5))))
+print(round(cdf(trans),4))
